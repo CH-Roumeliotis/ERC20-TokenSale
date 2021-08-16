@@ -22,7 +22,7 @@
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
- const mnemonic = 'near ethics bitter absorb treat alien ski other exile cluster lonely arrive';
+require('dotenv').config();
 
 module.exports = {
   /**
@@ -59,7 +59,7 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
      ropsten: {
-     provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/127d21e3baa246a1b1d22b19f9821b91`),
+     provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://ropsten.infura.io/v3/`+ process.env.INFURA_API_KEY),
      network_id: 3,       // Ropsten's id
      gas: 5500000,        // Ropsten has a lower block limit than mainnet
     // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
