@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "./ERC20basic.sol";
+import "contracts/ERC20basic.sol";
 
 contract tokenSale {
     address payable owner;
